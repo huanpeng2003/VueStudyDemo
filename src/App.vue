@@ -1,12 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <a-button type="primary" @click="btnClick">dianji</a-button>
+    <input type="text" v-model="msg">
+    <div id="nav" class="row">
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+  export default{
+    data(){
+        return{
+          msg:"hello"
+        }
+    },
+    methods:{
+      btnClick(){
+        alert(this.msg)
+      }
+    }
+  }
+
+</script>
 
 <style lang="less">
 #app {
